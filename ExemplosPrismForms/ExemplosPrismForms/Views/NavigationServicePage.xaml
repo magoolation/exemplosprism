@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ExemplosPrismForms.Views.NavigationServicePage">
+    <StackLayout Orientation="Vertical">
+        <Button Text="Passando parametros na URI" Command="{Binding NavigateCommand}"
+                CommandParameter="MainPage?title=Parametro%20passado%20na%20Uri" />
+        <Button Text="Confirmação de Navegação" Command="{Binding NavigateCommand}"
+                CommandParameter="NavigationModalPage" />
+    </StackLayout>
+</ContentPage>
