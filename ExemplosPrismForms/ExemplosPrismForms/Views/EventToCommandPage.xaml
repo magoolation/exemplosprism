@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:c="clr-namespace:ExemplosPrismForms.Converters"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ExemplosPrismForms.Views.EventToCommandPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <c:ItemTappedEventArgsConverter x:Key="ItemTappedConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView ItemsSource="{Binding Pessoas}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Nome}" Detail="{Binding Bio}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Behaviors>
+            <b:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTappedCommand}"
+                                      EventArgsConverter="{StaticResource ItemTappedConverter}" />
+        </ListView.Behaviors>
+    </ListView>
+</ContentPage>
