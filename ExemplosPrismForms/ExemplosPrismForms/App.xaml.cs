@@ -12,7 +12,7 @@ namespace ExemplosPrismForms
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("NavigationPage/NavigationServicePage");
+            NavigationService.NavigateAsync("DelegateCommandPage");
         }
 
         protected override void RegisterTypes()
@@ -23,6 +23,7 @@ namespace ExemplosPrismForms
             Container.RegisterTypeForNavigation<EventAggregatorDetailPage>();
             Container.RegisterTypeForNavigation<NavigationServicePage>();
             Container.RegisterTypeForNavigation<NavigationModalPage>();
+            Container.RegisterTypeForNavigation<DelegateCommandPage>();
         }
     }
 }

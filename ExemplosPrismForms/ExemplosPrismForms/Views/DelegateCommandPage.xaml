@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ExemplosPrismForms.Views.DelegateCommandPage">
+    <StackLayout Orientation="Vertical"  >
+        <Label Text="Autenticação" Font="18" />
+        <Entry Placeholder="Nome de usuário" Text="{Binding UserName}" />
+        <Entry Placeholder="Sua senha" Text="{Binding Password}" IsPassword="True" />
+        <Button Text="Entrar" Command="{Binding LoginCommand}" />
+    </StackLayout>
+</ContentPage>
