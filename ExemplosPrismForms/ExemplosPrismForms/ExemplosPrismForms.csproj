@@ -43,6 +43,7 @@
     <Compile Include="ViewModels\EventAggregatorDetailPageViewModel.cs" />
     <Compile Include="ViewModels\EventAggregatorPageViewModel.cs" />
     <Compile Include="ViewModels\EventToCommandPageViewModel.cs" />
+    <Compile Include="ViewModels\MainMenuPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\NavigationModalPageViewModel.cs" />
     <Compile Include="ViewModels\NavigationServicePageViewModel.cs" />
@@ -51,6 +52,9 @@
     </Compile>
     <Compile Include="Views\EventToCommandPage.xaml.cs">
       <DependentUpon>EventToCommandPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NavigationModalPage.xaml.cs">
       <DependentUpon>NavigationModalPage.xaml</DependentUpon>
@@ -126,7 +130,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MainMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\EventAggregatorDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

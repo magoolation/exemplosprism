@@ -12,7 +12,7 @@ namespace ExemplosPrismForms
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("EventToCommandPage");
+            NavigationService.NavigateAsync("MainMenuPage");
         }
 
         protected override void RegisterTypes()
@@ -25,6 +25,7 @@ namespace ExemplosPrismForms
             Container.RegisterTypeForNavigation<NavigationModalPage>();
             Container.RegisterTypeForNavigation<DelegateCommandPage>();
             Container.RegisterTypeForNavigation<EventToCommandPage>();
+            Container.RegisterTypeForNavigation<MainMenuPage>();
         }
     }
 }
